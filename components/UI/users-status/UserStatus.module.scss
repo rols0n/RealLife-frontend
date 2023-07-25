@@ -1,0 +1,36 @@
+@use "../../../styles/variables";
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+
+  // border: 2px solid variables.$main-color;
+  img {
+    border-radius: 100%;
+  }
+  div {
+    position: absolute;
+    background-color: variables.$main-color;
+    border-radius: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .status {
+    width: 40px;
+    height: 40px;
+    // border: 1px solid variables.$main-color !important;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    div {
+      height: 5px;
+      width: 5px;
+      margin-bottom: 25px;
+      margin-left: 25px;
+    }
+  }
+}

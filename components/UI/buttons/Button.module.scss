@@ -1,0 +1,45 @@
+@use "../../../styles/variables";
+
+.button,
+.aTag {
+  width: auto;
+  background-color: transparent;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.9rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  color: variables.$black;
+  // box-shadow: 0 9px 6px -8px variables. variables.$black;
+
+  font-weight: 500;
+
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+.activeButton {
+  background-color: variables.$main-color-tint1 !important;
+  color: variables.$white !important;
+  font-weight: 600 !important;
+  width: 120% !important;
+
+  box-shadow: inset 0 0 20px variables.$main-color;
+  font-size: 2.1rem !important;
+}
+
+@media screen and (max-width: 480px) {
+  .button,
+  .aTag {
+    padding: 5px 2px;
+    width: 100%;
+    font-size: 1.9rem;
+  }
+}

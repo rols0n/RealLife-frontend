@@ -1,0 +1,124 @@
+@use "../../../styles/variables";
+.post {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(212, 212, 212, 0.278);
+  box-shadow: 0 0 26px -16px black;
+  border-radius: 12px;
+  .nav {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 17px 18px -25px variables.$black-40shade;
+    padding-bottom: 7px;
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
+
+    .content {
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      column-gap: 7px;
+      .postInfo {
+        font-weight: 600;
+        color: variables.$black;
+      }
+
+      .userName {
+        font-weight: 400;
+        color: variables.$black-30shade;
+      }
+    }
+  }
+
+  .postText {
+    width: 95%;
+    align-self: center;
+    margin-top: 2px;
+    p {
+      font-weight: 500;
+      color: variables.$black;
+    }
+  }
+
+  .buttons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 0.6fr 1fr 0.6fr;
+    // box-shadow: 12px 0 20px -12px variables.$black-40shade;
+    border-top: 1px solid #dbdbdb75;
+
+    button {
+      font-weight: 500;
+      color: variables.$black-30shade;
+    }
+  }
+}
+
+.clicked {
+  color: variables.$black-40shade !important;
+  opacity: 0.9 !important;
+}
+
+@media screen and (max-width: 480px) {
+  .post {
+    width: 100%;
+    // margin-left: 1%;
+
+    margin-top: 12px;
+    padding: 5px 0;
+
+    // border-radius: 16px;
+
+    .nav {
+      margin-left: 10px;
+      margin-bottom: 4px;
+
+      .avatar {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+      }
+      .content {
+        row-gap: 0;
+
+        .postInfo,
+        .userName {
+          margin: 0;
+          padding: 0;
+        }
+
+        .postInfo {
+          font-size: 1.4rem;
+        }
+
+        .userName {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .postText {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      p {
+        font-size: 1.3rem;
+        // color: #6c6c6c;
+        width: 95%;
+      }
+    }
+
+    .buttons {
+      button {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

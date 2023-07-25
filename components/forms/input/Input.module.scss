@@ -1,0 +1,27 @@
+@use "../../../styles/variables";
+.description {
+  font-weight: 500;
+}
+
+.input {
+  border: none;
+  /* border-radius: 8px;
+  background-color: variables.$white-10tint; */
+  color: variables.$black;
+  font-weight: 400;
+  padding: 5px 12px;
+  border-bottom: 1px solid variables.$black-30shade;
+
+  &:active,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid variables.$main-color-tint1;
+    /* border-color: variables.$; */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .input {
+    font-size: 1.8rem;
+  }
+}

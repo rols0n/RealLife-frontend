@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  //   justify-content: center;
+  column-gap: 6px;
+  margin-bottom: 6px;
+  //   box-shadow: 0 18px 26px -28px black;
+  padding: 10px;
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+
+  .heading {
+    font-weight: 600;
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+}

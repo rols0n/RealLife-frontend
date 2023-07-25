@@ -1,0 +1,24 @@
+@use "../../../styles/variables";
+.inputs {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 3.2rem;
+  margin-bottom: 5.2rem;
+
+  row-gap: 12px;
+}
+
+.greeting {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+  .inputs {
+    width: 80%;
+  }
+
+  .greeting {
+    font-size: 2.2rem;
+  }
+}

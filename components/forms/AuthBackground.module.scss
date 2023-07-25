@@ -1,0 +1,43 @@
+.background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    // backdrop-filter: blur(20px);
+    img {
+      width: 200px;
+      height: auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 75%;
+
+    .content {
+      border-radius: 12px;
+      padding: 20px;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../../../styles/variables";
+.background {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(3px);
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    height: 30px !important;
+    padding: 10px 0;
+    width: 100%;
+
+    box-shadow: 0 9px 21px -16px variables.$black;
+    // justify-content: center;
+
+    h3 {
+      margin: auto;
+      left: 0;
+      right: 0;
+      align-self: center;
+      font-size: 1.8rem;
+      color: #000000;
+      //   position: absolute;
+      //   padding-top: 12px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      height: 30px;
+      width: 30px;
+      right: 0;
+
+      img {
+        height: 30px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+
+    background-color: rgba(255, 255, 255, 0.916);
+    border-radius: 12px;
+
+    box-shadow: 0 0 20px -10px black;
+
+    .navbar {
+      margin-top: 12px;
+    }
+  }
+}

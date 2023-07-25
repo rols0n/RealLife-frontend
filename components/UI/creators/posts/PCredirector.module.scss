@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  padding: 0;
+  button {
+    width: 63% !important;
+
+    border-radius: 20px !important;
+
+    transform: scale(0.88) !important;
+
+    margin-bottom: 12px !important;
+    opacity: 0.9 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    button {
+      width: 63% !important;
+
+      border-radius: 20px !important;
+
+      transform: scale(0.88) !important;
+
+      margin-bottom: 12px !important;
+      opacity: 0.9 !important;
+    }
+  }
+}

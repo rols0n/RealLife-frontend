@@ -1,0 +1,25 @@
+.container {
+  overflow: scroll;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 10%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel {
+    display: flex;
+    column-gap: 12px;
+    transition: transform 0.3s ease;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

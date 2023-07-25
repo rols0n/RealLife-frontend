@@ -1,0 +1,95 @@
+@use "../../../../styles/variables";
+
+.images {
+  display: grid;
+
+  width: 100%;
+  max-height: 140vh;
+  column-gap: 2px;
+  row-gap: 2px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+// 1 image
+.layout1 {
+  grid-template-columns: 1fr;
+}
+
+// 2 images
+.layout2 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  .image1 {
+    grid-column: 1;
+  }
+
+  .image2 {
+    grid-column: 2;
+  }
+}
+
+// 2 images
+.layout3 {
+  grid-template-columns: 1fr;
+
+  grid-template-rows: 1fr 1fr;
+}
+
+//   =============
+
+// 3 images
+.layout4 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+// 3 images
+.layout5 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  .image1 {
+    grid-row: span 2;
+  }
+}
+
+// 3 images
+.layout6 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  .image1 {
+    grid-column: span 2;
+  }
+}
+
+//   =============
+// 4 images
+.layout7 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+// 4 images
+.layout8 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  .image1 {
+    grid-row: span 3;
+  }
+}
+
+// 4 images
+.layout9 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  .image1 {
+    grid-column: span 3;
+  }
+}
