@@ -1,1 +1,51 @@
 // Create a post preview
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 12px 5px;
+}
+.buttons {
+  display: flex;
+  width: 60%;
+  margin-top: 32px;
+  justify-self: flex-end;
+
+  button {
+    transform: scale(0.8);
+  }
+}
+
+.form {
+  display: grid;
+}
+
+.files {
+  margin-top: 12px;
+
+  background-color: transparent;
+
+  &::file-selector-button {
+    background-color: #fff;
+    // border: none;
+    border: 1px solid #dedddd;
+    font-weight: 500;
+    color: #262626;
+    font-size: 1.7rem;
+    border-radius: 7px;
+    padding: 2px 16px;
+  }
+}
+
+
+.images {
+  margin: 8px;
+  // height: 200px;
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

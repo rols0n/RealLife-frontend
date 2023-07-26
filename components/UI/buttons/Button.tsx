@@ -8,20 +8,21 @@ const Button = (props: {
   link: string | boolean;
   class?: string;
   children?: any;
+  onClick?: any;
 }) => {
   let btnClass = classes.button + " " + props?.class;
   if (props.isActive === true)
     btnClass = classes.button + " " + classes.activeButton;
   if (typeof props.link !== "boolean")
     return (
-      <Link href={props.link} className={btnClass}>
+      <Link href={props.link} onClick={props.onClick} className={btnClass}>
         {props.text}
       </Link>
     );
 
   if (typeof props.type === "string")
     return (
-      <button className={btnClass} type={props.type}>
+      <button className={btnClass} onClick={props.onClick} type={props.type}>
         {props.children}
         {props.text}
       </button>

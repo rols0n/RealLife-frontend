@@ -11,6 +11,7 @@ const RegularPopup = (props: {
   placeholder: string;
   inputID: string;
   previews?: any[];
+  children?: any;
 }) => {
   const htmlContent = (
     <PopupBackground heading={props.heading} setDisplay={props.setDisplay}>
