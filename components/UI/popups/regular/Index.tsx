@@ -7,6 +7,7 @@ import classes from "./Index.module.scss";
 import PopupPreview from "../components/Preview";
 const RegularPopup = (props: {
   setDisplay: Dispatch<SetStateAction<boolean>>;
+  scrollHeight: any;
   heading: string;
   placeholder: string;
   inputID: string;
@@ -14,7 +15,11 @@ const RegularPopup = (props: {
   children?: any;
 }) => {
   const htmlContent = (
-    <PopupBackground heading={props.heading} setDisplay={props.setDisplay}>
+    <PopupBackground
+      heading={props.heading}
+      setDisplay={props.setDisplay}
+      scrollHeight={props.scrollHeight}
+    >
       <div className={classes.container}>
         <Input
           placeholder={props.placeholder}

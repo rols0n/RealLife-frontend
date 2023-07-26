@@ -16,6 +16,7 @@ const Button = (props: {
   if (typeof props.link !== "boolean")
     return (
       <Link href={props.link} onClick={props.onClick} className={btnClass}>
+        {props.children}
         {props.text}
       </Link>
     );

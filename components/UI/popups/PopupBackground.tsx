@@ -3,10 +3,16 @@ import { Dispatch, SetStateAction } from "react";
 const PopupBackground = (props: {
   setDisplay: Dispatch<SetStateAction<boolean>>;
   heading: string;
+  scrollHeight: any;
 }) => {
   const closePopup = () => {
     props.setDisplay(false);
     document.body.style = "overflow-y: scroll";
+
+    window.scrollTo({
+      top: props.scrollHeight,
+      behavior: "smooth",
+    });
   };
 
   const handlePopupClick = (event: { stopPropagation: () => void }) => {

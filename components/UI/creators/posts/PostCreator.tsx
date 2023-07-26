@@ -37,13 +37,15 @@ const PostCreator = (props: {
           <GrowingInput
             labelText="Description"
             placeholder="What's on your mind?"
-            minHeight={30}
-            maxHeight={250}
+            minHeight={100}
+            maxHeight={150}
             inputID="growing-input"
           />
         </div>
 
-        <div className={classes.images}><ImagesGrid images={selectedImages} /></div>
+        <div className={classes.images}>
+          <ImagesGrid images={selectedImages} />
+        </div>
 
         <input
           className={classes.files}
@@ -54,7 +56,16 @@ const PostCreator = (props: {
         />
 
         <div className={classes.buttons}>
-          <Button isActive={false} type="button" link={false} text="Cancel" />
+          <Button
+            isActive={false}
+            type="button"
+            link={false}
+            text="Cancel"
+            onClick={() => {
+              props.setDisplay(false);
+              document.body.style = "overflow-y: scroll";
+            }}
+          />
           <Button isActive={true} type="submit" link={false} text="Submit" />
         </div>
       </form>
