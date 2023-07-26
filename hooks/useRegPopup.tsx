@@ -17,8 +17,9 @@ const setDisplayer = (
 const useRegPopup = (props: {
   previews?: object[];
   heading: string;
-  placeholder: string;
-  inputID: string;
+  placeholder?: string;
+  inputID?: string;
+  children?: any;
 }) => {
   const [display, setDisplay] = useState(false);
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -50,6 +51,8 @@ const useRegPopup = (props: {
             placeholder={props.placeholder}
             inputID={props.inputID}
             previews={props.previews}
+            // eslint-disable-next-line react/no-children-prop
+            children={props.children}
           />
         )}
       </>

@@ -9,8 +9,8 @@ const RegularPopup = (props: {
   setDisplay: Dispatch<SetStateAction<boolean>>;
   scrollHeight: any;
   heading: string;
-  placeholder: string;
-  inputID: string;
+  placeholder?: string;
+  inputID?: string;
   previews?: any[];
   children?: any;
 }) => {
@@ -20,14 +20,16 @@ const RegularPopup = (props: {
       setDisplay={props.setDisplay}
       scrollHeight={props.scrollHeight}
     >
-      <div className={classes.container}>
-        <Input
-          placeholder={props.placeholder}
-          labelText=""
-          inputType="text"
-          inputID={props.inputID}
-        />
-      </div>
+      {props.placeholder && (
+        <div className={classes.container}>
+          <Input
+            placeholder={props.placeholder}
+            labelText=""
+            inputType="text"
+            inputID={props.inputID}
+          />
+        </div>
+      )}
 
       <div className={classes.previews}>
         {props.previews?.map(({ image, heading, description }, index) => {
