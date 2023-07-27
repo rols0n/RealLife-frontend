@@ -39,16 +39,18 @@ const BottomNavbar = (props: { page: "home" | "more" }) => {
           >
             <img src="./icons/Notification.png" alt="Home page" />
           </Button>
+
           <Button
             isActive={false}
             type="button"
             text=""
-            link={false}
+            link={props.page === "home" ? false : "/"}
             class={props.page === "home" && classes.active}
             onClick={scrollToTop}
           >
             <img src={homeSrc} alt="Home page" />
           </Button>
+
           <Button
             isActive={false}
             type="button"
