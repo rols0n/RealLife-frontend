@@ -10,12 +10,13 @@ const GrowingInput = (props: {
 
   labelClass?: string;
   inputClass?: string;
+  onClick?: any;
 }) => {
   const [textareaHeight, setTextareaHeight] = useState(props.minHeight);
   const handleOverflow = (input) => {
     const { scrollHeight, clientHeight, value } = input.target;
     if (props.maxHeight) if (clientHeight > props.maxHeight) return;
-    console.log(value.length);
+
     if (value.length < 20) {
       setTextareaHeight(props.minHeight);
       return;
@@ -42,6 +43,7 @@ const GrowingInput = (props: {
         onChange={handleOverflow}
         placeholder={props.placeholder}
         id={props.inputID}
+        onClick={props.onClick}
       />
     </>
   );

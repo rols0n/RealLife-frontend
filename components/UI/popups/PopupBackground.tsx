@@ -1,6 +1,7 @@
 import classes from "./PopupBackground.module.scss";
 import { Dispatch, SetStateAction } from "react";
 const PopupBackground = (props: {
+  children?: any;
   setDisplay: Dispatch<SetStateAction<boolean>>;
   heading: string;
   scrollHeight: any;

@@ -1,6 +1,7 @@
 import Button from "../buttons/Button";
 
 import classes from "./Post.module.scss";
+import Comments from "./comments/Index";
 import ImagesGrid from "./components/ImagesGrid";
 import useRegPopup from "@/hooks/useRegPopup";
 
@@ -18,6 +19,7 @@ const Post = () => {
     toggle: toggleComments,
   } = useRegPopup({
     heading: "Comments",
+    children: <Comments />,
   });
   return (
     <>

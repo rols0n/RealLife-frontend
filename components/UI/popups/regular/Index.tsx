@@ -31,18 +31,22 @@ const RegularPopup = (props: {
         </div>
       )}
 
-      <div className={classes.previews}>
-        {props.previews?.map(({ image, heading, description }, index) => {
-          return (
-            <PopupPreview
-              image={image}
-              heading={heading}
-              description={description}
-              key={index}
-            />
-          );
-        })}
-      </div>
+      {props.previews && (
+        <div className={classes.previews}>
+          {props.previews?.map(({ image, heading, description }, index) => {
+            return (
+              <PopupPreview
+                image={image}
+                heading={heading}
+                description={description}
+                key={index}
+              />
+            );
+          })}
+        </div>
+      )}
+
+      {props.children}
     </PopupBackground>
   );
   return createPortal(htmlContent, document.getElementById("popups"));
