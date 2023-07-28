@@ -8,7 +8,10 @@ const scrollToTop = () => {
     behavior: "smooth",
   });
 };
-const BottomNavbar = (props: { page: "home" | "more" }) => {
+const BottomNavbar = (props: {
+  page: "home" | "more";
+  customMoreLink: string;
+}) => {
   let homeSrc = "./icons/Home.png";
 
   let moreSrc = "./icons/More.png";
@@ -64,7 +67,7 @@ const BottomNavbar = (props: { page: "home" | "more" }) => {
             isActive={false}
             type="button"
             text=""
-            link={"/more"}
+            link={props.customMoreLink ? props.customMoreLink : "/more"}
             class={props.page === "more" && classes.active}
           >
             <img src={moreSrc} alt="Home page" />
